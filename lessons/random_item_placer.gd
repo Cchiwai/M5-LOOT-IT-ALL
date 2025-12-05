@@ -1,10 +1,11 @@
 extends Node2D
-
+@export var max_items := 6
+var current_items := 0
 var item_scenes := [
 	preload("res://gem.tscn"),
 	preload("res://health_pack.tscn")
 ] 
-
+	
 func _ready() -> void:
 	get_node("Timer").timeout.connect(_on_timer_timeout)
 
